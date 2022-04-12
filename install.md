@@ -18,28 +18,41 @@ Assumptions
 
 
 
+Canbus wiring
 
-
-
-
-
+![](images/canbus_wiring.svg)
 
 
 
 ### RS485 SPECIFIC
 
-
-
 /boot/cmdline.txt
+
+```bash
+do stuff
+```
 
 
 
 /boot/config.txt
 
+``` bash
+do stuff
+```
 
-#### Setting up the CAN0 network (RS485 & slcan firmwares)
 
-`sudo nano /etc/network/interfaces.d/can0`
+
+
+
+#### Setting up the CAN0 network
+
+A canbus 
+
+```bash
+sudo nano /etc/network/interfaces.d/can0
+```
+
+
 
 ```bash
 auto can0
@@ -51,9 +64,25 @@ iface can0 can static
 
 
 
-#### Setting up the CAN0 network (candlelight_fw)
+**Add a startup rule** *(this is to rc.local, I tried systemd but couldnt get the syntax)*
 
-```ip link set can0 up type can bitrate 500000``` <? how on boot?
+```bash
+sudo sed -i '/^exit\ 0$/i \ifconfig can0 down\nip link set can0 type can bitrate 500000\nip link set can0 txqueuelen 256\nifconfig can0 up' /etc/rc.local
+```
+
+
+
+*Reboot*
+
+```bash
+sudo reboot
+```
+
+
+
+
+
+
 
 ### Firmware configuration
 
