@@ -7,9 +7,9 @@
 ```bash
 auto can0
 iface can0 can static
- bitrate 500000
+ bitrate 250000
  up ifconfig $IFACE txqueuelen 256
- pre-up ip link set can0 type can bitrate 500000
+ pre-up ip link set can0 type can bitrate 250000
  pre-up ip link set can0 txqueuelen 256
  ```
 
