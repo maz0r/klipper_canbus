@@ -1,13 +1,18 @@
 # Flashing Candlelight_FW
-## Web updated - requires Chrome or Edge
 
-The instructions here will get you sorted and you can refer to the below image for the boot pins on the MKS variant of the clones
+Most clones will ship with either slcan or candlelight and will be plug and play rendering this section null.
 
-Just follow the instructions here > **https://canable.io/updater/**
-If you encounter issues follow the links they have for fixing Windows Drivers, or if on Linux adding a udev rule.
+However if you would like to try a different firmware for troubleshooting, you can webflash these boards using the following webpage **(requires Chrome or Edge)**
 
-*Jumper the Boot pins*
-MKS Canable, MKS Canable Pro
+
+
+## **https://canable.io/updater/**
+
+
+If you encounter issues with the device not being recognised or being write restricted follow the links they have for fixing Windows Drivers, or if on Linux adding a udev rule.
+
+Note, the clones may not have a button for instance the jumpers for the MKS Canable, MKS Canable Pro are highlightedin the below image.
+
 ![](images/mks-canable-pro.png)
 
 
