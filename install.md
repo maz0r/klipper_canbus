@@ -24,6 +24,7 @@ Canbus wiring
 ## Controller Setup
 
 [RS485 PI Setup](rs485.md)
+
 [Canable PI Setup](canable.md)
 
 ### Optional Flashing of Candlelight_fw
