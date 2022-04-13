@@ -19,57 +19,20 @@ Assumptions
 Canbus wiring
 
 ![](images/canbus_wiring.svg)
+*Note: RS485s may suffer some interference as they don't have a dedicated ground wire.*
 
+## Controller Setup
 
+[RS485 PI Setup](rs485.md)
+[Canable PI Setup](canable.md)
 
-## RS485 SPECIFIC
+### Optional Flashing of Candlelight_fw
 
-/boot/cmdline.txt
-
-```bash
-do stuff
-```
-
-
-/boot/config.txt
-
-``` bash
-do stuff
-```
-
-#### Setting up the CAN0 network
-
-A canbus 
-
-```bash
-sudo nano /etc/network/interfaces.d/can0
-```
-
-
-
-```bash
-auto can0
-iface can0 can static
-    bitrate 500000
-    up ifconfig $IFACE txqueuelen 128
-
-```
-
-**Add a startup rule** *(this is to rc.local, I tried systemd but couldnt get the syntax)*
-
-```bash
-sudo sed -i '/^exit\ 0$/i \ifconfig can0 down\nip link set can0 type can bitrate 500000\nip link set can0 txqueuelen 256\nifconfig can0 up' /etc/rc.local
-```
-
-*Reboot*
-
-```bash
-sudo reboot
-```
+[Flashing Candlelight_fw](candlelight_fw.md)
 
 ### Flashing the MCU
 
-
+[Huvud 0.61](huvud_firmware.md)
 
 ### Validation
 
@@ -77,5 +40,4 @@ PI W2 - BTT PICO - UART - MKS CANABLE PRO - HUVUD 0.61
 
 PI 4B - BTT PICO - USB - Waveshare RS485 CAN HAT
 
-?? can-utils
 
