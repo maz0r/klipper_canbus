@@ -13,13 +13,34 @@ Assumptions
   - Huvud
   - SHT36/42
   - TurboCAN
+- This guide and a brew (or coffee if you must)
+  
 
-## Initial Setup
+## **IMPORTANT**
 
-*An simplified overview of Canbus wiring*
+Each controller page has a set of "safe" default settings which should work for the majority of users, you should initially setup your controller based on these values as these will inform some of the settings to be used for your Toolhead board of choice *i.e. the bitrate*
 
-![](./images/canbus_wiring.svg)
 
+## Overview
+### What is Canbus
+
+CANbus is vehicle standard that allows for communication between multiple devices on a single network (multiplex wiring). The protocol has been used in Automotive applications since the early 90's and it's ubiquitous in modern vehicles.
+
+Want to know more: [https://en.wikipedia.org/wiki/CAN_bus](https://en.wikipedia.org/wiki/CAN_bus)
+
+### Why do I want it
+
+Wires be heavy yo.
+
+
+### *A simplified overview of Canbus wiring*
+
+![<img src='./images/canbus_wiring.svg'>](images/canbus_wiring.svg)
+
+- [ ] Explain termination
+- [ ] Highlight where different controller/board combinations may be wired differently (termination/ground/voltage passthrough etc).
+
+***
 
 
 ## Control boards
@@ -42,24 +63,24 @@ Assumptions
 [<img src='./images/utoc-1.jpg' width='250'>](/controller/utoc1-3.md)
 
 
+## Toolhead boards
 
-## Controller Setup
+[huvud](./toolhead/huvud-0.61.md)
 
-[RS485 PI Setup](./boards/rs485.md)
+[<img src='./images/huvud_0.61.png' width='250'>](./toolhead/huvud-0.61.md)
 
-[Canable PI Setup](./boards/canable.md)
 
-### Optional Flashing of Candlelight_fw
+[SHTXX](./toolhead/sht36-42.md)
 
-[Flashing Candlelight_fw](./boards/candlelight_fw.md)
+[<img src='./images/sht36.jpg' width='250'>](./toolhead/sht36-42.md)
+[<img src='./images/sht42.jpg' width='250'>](./toolhead/sht36-42.md)
 
-### Flashing the MCU
 
-[Huvud 0.61](./boards/huvud_firmware.md)
+[TurboCAN](./toolhead/turbocan.md)
 
-### Validation
+[<img src='./images/turbocan.jpg' width='250'>](./toolhead/turbocan.md)
 
-PI W2 - BTT PICO - UART - MKS CANABLE PRO - HUVUD 0.61
 
-PI 4B - BTT PICO - USB - Waveshare RS485 CAN HAT
+
+
 

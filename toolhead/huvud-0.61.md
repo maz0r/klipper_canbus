@@ -6,6 +6,16 @@ This firmware allows them to be flashed via USB however they will still require 
 
 If this firmware is missing an STLINK is needed to perform a bootloader 
 
+
+
+## Huvud Pinout
+
+![huvud_pinout](../images/huvud_0.61_pinout.png)
+
+
+
+
+
 ###
 
 
@@ -32,9 +42,14 @@ Wire the boards up like so
 
 ![](../images/huvud_flash_wiring.svg)
 
+
 #### Flashing
 
 
 To enter the bootloader pin BOOT1 must be connected to  3.3V when the board is powered up or reset. When in the bootloader the  green LED will flash quickly. Flash with the command "make flash  FLASH_DEVICE=1209:beba"
 
 Hopefully a CAN capable bootloader will be developed to allow flashing over CAN bus.
+
+
+
+### [Return to Main](../readme.md)
