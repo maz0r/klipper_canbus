@@ -19,7 +19,7 @@ If this firmware is missing an STLINK is needed to perform a bootloader
 
 Press <kbd>Q</kbd> to save and build the firmware.
 
-![](images/hubud_config.png)
+![](../images/hubud_config.png)
 
 
 ### 
@@ -30,7 +30,7 @@ duo
 
 Wire the boards up like so
 
-![](images/huvud_flash_wiring.svg)
+![](../images/huvud_flash_wiring.svg)
 
 #### Flashing
 
@@ -38,6 +38,3 @@ Wire the boards up like so
 To enter the bootloader pin BOOT1 must be connected to  3.3V when the board is powered up or reset. When in the bootloader the  green LED will flash quickly. Flash with the command "make flash  FLASH_DEVICE=1209:beba"
 
 Hopefully a CAN capable bootloader will be developed to allow flashing over CAN bus.
-
-
-Sorry to hear that, hopefully he gets the help he needs.
