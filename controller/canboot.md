@@ -9,7 +9,10 @@ Work is currently underway to introduce this functionality to Klipper via [this 
 
 ### Flashing the canboot firmware via DFU on ST32F072C8 (SHT36/42)
 
-Loose steps.
+**This method doesnt work for the Huvud as the STM32F103XX lacks a DFU bootloader so use [this](#flashing-via-stlink-v2)**
+
+
+These  steps assume you have setup your Controller prior
 
 1. Add jumper to Boot0 and 3.3v and connect the SHT via USB
 2. Verify the device is in bootloader moad by using lsusb
@@ -20,10 +23,12 @@ Loose steps.
     cd ~/
     git clone https://github.com/Arksine/CanBoot
     ```
+
 4. run the following
     ```bash
     cd CanBoot
-    make menuconfig```
+    make menuconfig
+    ```
 
 5. **\<Board specific check\>**
    
@@ -61,6 +66,7 @@ sudo python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin
 If all is well you now have a klipper firmware on your canboot(loader) SHT36
 
 
+
 ### Flashing via STLink v2
 
 
@@ -71,18 +77,6 @@ If all is well you now have a klipper firmware on your canboot(loader) SHT36
 
 
 Reference images can also be found in the [below the video.](#stlink-pinout-reference) 
-
-
-
-
-
-
-
-
-```
-sudo dfu-util -a 0 -D ~/CanBoot/out/canboot.bin --dfuse-address 0x08000000:force:mass-erase:leave -d 0483:df11
-```
-
 
 
 

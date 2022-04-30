@@ -62,6 +62,11 @@ Wires be heavy yo.
 
 [<img src='./images/utoc-1.jpg' width='250'>](/controller/utoc1-3.md)
 
+## Bootloaders (Optional)
+
+[canboot](./controller/canboot.md)
+
+[<img src='./images/canboot.png' width='250'>](./controller/canboot.md)
 
 ## Toolhead boards
 
