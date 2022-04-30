@@ -15,7 +15,7 @@ Work is currently underway to introduce this functionality to Klipper via [this 
 These  steps assume you have setup your Controller prior
 
 1. Add jumper to Boot0 and 3.3v and connect the SHT via USB
-2. Verify the device is in bootloader moad by using lsusb
+2. Verify the device is in bootloader moad by using `lsusb`
    - you should see something like `Bus 001 Device 005: ID 0483:df11 STMicroelectronics STM Device in DFU Mode`
 3. clone the CanBoot repository to your pi
    
