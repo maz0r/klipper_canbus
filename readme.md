@@ -35,7 +35,7 @@ Wires be heavy yo.
 
 ### *A simplified overview of Canbus wiring*
 
-![<img src='./images/canbus_wiring.svg'>](images/canbus_wiring.svg)
+![<img src='./images/canbus_wiring.jpg'>](images/canbus_wiring.jpg)
 
 - [ ] Explain termination
 - [ ] Highlight where different controller/board combinations may be wired differently (termination/ground/voltage passthrough etc).
