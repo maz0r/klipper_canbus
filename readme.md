@@ -20,7 +20,6 @@ Assumptions
 
 Each controller page has a set of "safe" default settings which should work for the majority of users, you should initially setup your controller based on these values as these will inform some of the settings to be used for your Toolhead board of choice *i.e. the bitrate*
 
-
 ## Overview
 ### What is Canbus
 
@@ -62,7 +61,7 @@ Wires be heavy yo.
 
 [<img src='./images/utoc-1.jpg' width='250'>](/controller/utoc1-3.md)
 
-## Bootloaders (Optional)
+## Special Bootloaders (Optional)
 
 [canboot](./controller/canboot.md)
 
@@ -87,5 +86,78 @@ Wires be heavy yo.
 
 
 
+## Connecting your controller to your Toolhead board
+
+.. stub with just text for now but will add diagrams for various configurations.
+
+.. termination resistors
+
+### RS485 / Waveshare HAT
+
+The Waveshare CAN HAT has an integrated termination and it's best practice to add pullup at the toolhead.
+
+- H on the Waveshare to H on the toolhead
+- L on the Waveshare to L on the toolhead
+- 12/24v from PSU 12/24v on Toolhead 
+- GND from PSU oo toolhead
+
+### UTOC-1 / UTOC-3
+
+- USB from the PI to the UTOC board
+- H on UTOC to H on toolhead
+- L on UTOC to L on toolhead
+- 24V from  PSU to UTOC
+- GND from PSU to UTOC
+- 24 on UTOC to 24 on toolhead
+- GND on UTOC to GND on toolhead
+
+### CANABLE / CANABLE PRO
+
+#### Normal
+
+`<no image>`
+
+- USB from the PI
+- GND from PSU to GND on the CANABLE
+- GND from PSU to GND on toolhead 
+- 12/24v from PSU to 12/24v on toolhead 
+- H from Canable to H on toolhead 
+- L from Canable to L on toolhead
+
+#### Termination resistors
 
 
+
+Standard controller termination
+`<no image>`
+
+*There are two jumpers near the green port, bridge the furthest two along the edge of the boad*
+
+Pro Controller termination
+
+[<img src='./images/mks_canable_terminated.jpg' width='250'>](./images/mks_canable_terminated.jpg)
+
+
+
+### Terminations
+
+While noit compulsary it is useful to have terminations at both ends of a the can bus (note if chaining multiple devices only the START and END of the bus need termiations.)
+#### HUVUD Termination
+
+There is no 120ohm resistor on the board, you can solder your own SMT style resistor using the designated pads (shown below)
+
+[<img src='./images/huvud_0.61_termination.jpg' width='250'>](./images/huvud_0.61_termination.jpg)
+
+
+#### SHTXX Termination
+
+The SHT boards include termination resistors and jumpers.
+So simply bridge the green pins is per the images below.
+
+##### 36
+
+[<img src='./images/sht36_terminated.jpg' width='250'>](./images/sht36_terminated.jpg)
+
+##### 42
+ 
+[<img src='./images/sht42_terminated.jpg' width='250'>](./images/sht42_terminated.jpg) 
