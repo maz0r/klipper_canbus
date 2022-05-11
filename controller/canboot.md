@@ -6,8 +6,6 @@ This can greatly simplify maintenance, and is seen by many as a great quality of
 
 Work is currently underway to introduce this functionality to Klipper via [this pr.](https://github.com/Klipper3d/klipper/pull/5420) 
 
-**NOTE FLASHING THE BOOTLOADER WONT WORK FOR CERTAIN BOARDS AS IT REQUIRES AN 8KB BOOTLOADER OFFSET TO WORK, THIS BOOTLOADER IS NOT PRESENT IN THE MAIN BRANCH OF KLIPPER**
-
 
 ### Flashing the canboot firmware via DFU on ST32F072C8 (SHT36/42)
 
