@@ -41,7 +41,7 @@ These  steps assume you have setup your Controller prior
     >`make`
     
 
-7. flash the canboot bootloader to the board **YOUR DeviceID (0483:df11) may be difference CHECK IT!**
+7. flash the canboot bootloader to the board **YOUR DeviceID (0483:df11) may be difference CHECK IT!** *(see step 2)*
 
 8. ERASE AND FLASH THE CANBOOT FIRMWARE
    
@@ -49,22 +49,52 @@ These  steps assume you have setup your Controller prior
 
 ![../images/canboot_bootloader_flash.png](../images/canboot_bootloader_flash.png)
 
-9.  Power off the SHT, remove the boot jumper, and insert the CANBUS cable (or turn on your 24v rail)
+9.  Power off the SHT, remove the boot jumper, and insert the CANBUS cable
+10. You can now power up your printer with the toolhead board attached via the appropriate wiring scheme using the H L 24v and gnd wires.
+    
 
-10. Wait for the device to boot and ensure your CAN0 network is up and you can see the device 
+11. Wait for the device to boot and ensure your CAN0 network is up and you can see the device 
+    
     >`~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0`
 
-11. once you see the network you can flash the board using the flash_can.py script with the following command (Replace MYUUID with your own (i.e. 2c77b9d71a11 ))
+You should see something like `"Found canbus_uuid=XXXXXXXXXX, Application: CanBoot"`
+
+\<pending image\>
+
+
+12. Assumiing the above is working you can now flash Klipper to your board via CanBoot...
+
+```bash 
+cd ~/klipper
+make menuconfig
+```
+
+![../images/sht_klipper_canboot.png](../images/sht_klipper_canboot.png)
+
+Hit <kbd>Q</kbd> to exit and select <kbd>Y</kbd> to save changes.
+
+```bash
+make clean
+make
+```
+
+You can now flash the board
+
 
 ```
-sudo python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u MYUUID
+python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u MYUUID
 ```
 
 ![../images/canboot_flash.png](../images/canboot_flash.png)
 
 
-If all is well you now have a klipper firmware on your canboot(loader) SHT36
+If all is well you now have a klipper firmware on your SHT.
 
+To verify this you can query the canbus uuid with 
+
+    >`~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0`
+
+You should see something like `"Found canbus_uuid=XXXXXXXXXX, Application: Klipper"`
 
 
 ### Flashing via STLink v2
