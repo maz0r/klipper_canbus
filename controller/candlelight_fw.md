@@ -20,4 +20,4 @@ Note, the clones may not have a button for instance the jumpers for the MKS Cana
 
 
 
-### [Return to Main](../readme.md)
+### [Return to Main](../index.md)

@@ -38,4 +38,4 @@ In order to flash the UTOC a jumper cap needs to be installed as indicated in th
 [utc_firmware.bin](./firmware_files/utoc_firmware.bin) 
 
 
-### [Return to Main](../readme.md)
+### [Return to Main](../index.md)

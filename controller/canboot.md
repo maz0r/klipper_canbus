@@ -119,4 +119,4 @@ Reference images can also be found in the [below the video.](#stlink-pinout-refe
 [<img src='../images/sht_stlink.png' width='1000'>]()
 
 
-### [Return to Main](../readme.md)
+### [Return to Main](../index.md)
