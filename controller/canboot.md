@@ -4,17 +4,15 @@ Canboot is a bootloader which can be used to flash firmware on your Toolhead boa
 
 This can greatly simplify maintenance, and is seen by many as a great quality of life improvement.
 
-Work is currently underway to introduce this functionality to Klipper via [this pr.](https://github.com/Klipper3d/klipper/pull/5420) 
+
+## Flashing the canboot firmware via DFU on ST32F072C8 (SHT36/42)
+
+**This method doesnt work for the Huvud as the STM32F103XX lacks a DFU bootloader so use [this](#flashing-via-stlink-v2) method for now**
 
 
-### Flashing the canboot firmware via DFU on ST32F072C8 (SHT36/42)
+These following steps assume you have setup your Controller and CAN0 network already.
 
-**This method doesnt work for the Huvud as the STM32F103XX lacks a DFU bootloader so use [this](#flashing-via-stlink-v2)**
-
-
-These  steps assume you have setup your Controller prior
-
-1. Add jumper to Boot0 and 3.3v and connect the SHT via USB
+1. Add jumper to Boot0 and 3.3v and connect the SHT via USB to the PI
 2. Verify the device is in bootloader moad by using `lsusb`
    - you should see something like `Bus 001 Device 005: ID 0483:df11 STMicroelectronics STM Device in DFU Mode`
 3. clone the CanBoot repository to your pi
@@ -41,7 +39,7 @@ These  steps assume you have setup your Controller prior
     >`make`
     
 
-7. flash the canboot bootloader to the board **YOUR DeviceID (0483:df11) may be difference CHECK IT!** *(see step 2)*
+7. Flash the canboot bootloader to the board **YOUR DeviceID (0483:df11) may be different CHECK IT!** *(see step 2)*
 
 8. ERASE AND FLASH THE CANBOOT FIRMWARE
    
