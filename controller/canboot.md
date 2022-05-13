@@ -67,6 +67,9 @@ cd ~/klipper
 make menuconfig
 ```
 
+  > Enable low level configuratation
+  > set the following.
+
 ![../images/sht_klipper_canboot.png](../images/sht_klipper_canboot.png)
 
 Hit <kbd>Q</kbd> to exit and select <kbd>Y</kbd> to save changes.
@@ -90,7 +93,9 @@ If all is well you now have a klipper firmware on your SHT.
 
 To verify this you can query the canbus uuid with 
 
-    >`~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0`
+```bash
+~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0
+```
 
 You should see something like `"Found canbus_uuid=XXXXXXXXXX, Application: Klipper"`
 
