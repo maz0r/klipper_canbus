@@ -69,6 +69,14 @@ Wires be heavy yo.
 
 ## Toolhead boards
 
+
+**EXAMPLE CONFIGURATIONS HERE**
+## [example configs](./toolhead/examples.md)
+**^^^ EXAMPLE CONFIGURATIONS HERE ^^^**
+
+
+## Toolhead boards
+
 [huvud](./toolhead/huvud-0.61.md)
 
 [<img src='./images/huvud_0.61.png' width='250'>](./toolhead/huvud-0.61.md)
