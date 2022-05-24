@@ -61,7 +61,7 @@ Wires be heavy yo.
 
 [<img src='./images/utoc-1.jpg' width='250'>](/controller/utoc1-3.md)
 
-## Special Bootloaders (Optional)
+## Special Bootloaders (Optional but recommended)
 
 [canboot](./controller/canboot.md)
 
@@ -77,6 +77,14 @@ Wires be heavy yo.
 
 ## Toolhead boards
 
+### **PSA**
+**Not all toolheads boards use the same wiring so PLEASE CHECK YOUR WIRING**
+
+[<img src='./images/PSA_WIRING.png' width='250'>]()
+
+*example of the EBB42 alongside the SHT36, note the pins are *
+
+
 [huvud](./toolhead/huvud-0.61.md)
 
 [<img src='./images/huvud_0.61.png' width='250'>](./toolhead/huvud-0.61.md)
@@ -87,6 +95,10 @@ Wires be heavy yo.
 [<img src='./images/sht36.jpg' width='250'>](./toolhead/sht36-42.md)
 [<img src='./images/sht42.jpg' width='250'>](./toolhead/sht36-42.md)
 
+[EBB v1.0 (F072)](./toolhead/ebbv1.md)
+
+[<img src='./images/ebb36v1.png' width='250'>](./toolhead/ebb36v1.md)
+[<img src='./images/ebb42v1.png' width='250'>](./toolhead/ebb42v1.md)
 
 [TurboCAN](./toolhead/turbocan.md)
 
