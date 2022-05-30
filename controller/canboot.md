@@ -105,7 +105,7 @@ You should see something like `"Found canbus_uuid=XXXXXXXXXX, Application: Klipp
 
 [eddietheengineer](https://github.com/eddietheengineer) has an excellent guide on flashing the CANBoot firmware.
 
-[![Flashing Klipper Firmware over CAN!](../images/klipper_to_can_yt.jpg)](https://www.youtube.com/watch?v=R75luW8K0kg "Flashing Klipper Firmware over")
+[![Flashing Klipper Firmware over CAN!](../images/klipper_to_can_yt.jpg)](https://www.youtube.com/watch?v=YrF99Sff9g8 "Flashing Klipper Firmware over CANBUS")
 
 
 
