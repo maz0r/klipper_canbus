@@ -85,20 +85,30 @@ Wires be heavy yo.
 *example of the EBB42 alongside the SHT36, note the pins are *
 
 
-[huvud](./toolhead/huvud-0.61.md)
+### [Huvud](./toolhead/huvud-0.61.md)
 
-[<img src='./images/huvud_0.61.png' width='250'>](./toolhead/huvud-0.61.md)
+[<img src='./images/huvud_0.61.png' width='250'>](../toolhead/huvud-0.61.md)
 
-
-[SHTXX](./toolhead/sht36-42.md)
+### [SHTXX](./toolhead/sht36-42.md)
 
 [<img src='./images/sht36.jpg' width='250'>](./toolhead/sht36-42.md)
 [<img src='./images/sht42.jpg' width='250'>](./toolhead/sht36-42.md)
 
-[EBB v1.0 (F072)](./toolhead/ebbv1.md)
+### [EBB v1.0 (F072)](./toolhead/ebb36-42_v1.0.md)
 
-[<img src='./images/ebb36v1.png' width='250'>](./toolhead/ebb36v1.md)
-[<img src='./images/ebb42v1.png' width='250'>](./toolhead/ebb42v1.md)
+[<img src='./images/ebb36_v1.0.png' width='250'>](./toolhead/ebb36-42_v1.0.md)
+[<img src='./images/ebb42_v1.0.png' width='250'>](./toolhead/ebb36-42_v1.0.md)
+
+### [EBB v1.1 (G0B1)](./toolhead/ebb36-42_v1.1.md)
+
+[<img src='./images/ebb36_v1.1.png' width='250'>](./toolhead/ebb36-42_v1.1.md)
+[<img src='./images/ebb42_v1.1.png' width='250'>](./toolhead/ebb36-42_v1.1.md)
+
+### [EBB v1.2 (G0B1)](./toolhead/ebb36-42_v1.2.md)
+
+[<img src='./images/ebb36_v1.1.png' width='250'>](./toolhead/ebb36-42_v1.2.md)
+[<img src='./images/ebb42_v1.1.png' width='250'>](./toolhead/ebb36-42_v1.2.md)
+
 
 [TurboCAN](./toolhead/turbocan.md)
 

@@ -1,125 +1,43 @@
 # CANboot
 
-Canboot is a bootloader which can be used to flash firmware on your Toolhead board without resorting to jumpers and USB cables.
+Canboot is a bootloader which can be used to flash firmware on your CAN or USB toolhead board without changing your wiring!
 
 This can greatly simplify maintenance, and is seen by many as a great quality of life improvement.
 
-
-## Flashing the canboot firmware via DFU on ST32F072C8 (SHT36/42)
-
-**This method doesnt work for the Huvud as the STM32F103XX lacks a DFU bootloader so use [this](#flashing-via-stlink-v2) method for now**
+Due to the sheer number of boards CanBoot now supports each with different means of entering boot mode, firmware requirements etc, I've decided to break families of boards into seperate files with full instructions for each.
 
 
-These following steps assume you have setup your Controller and CAN0 network already.
+Below you will find a link to each board family.
 
-1. Add jumper to Boot0 and 3.3v and connect the SHT via USB to the PI
-2. Verify the device is in bootloader moad by using `lsusb`
-   - you should see something like `Bus 001 Device 005: ID 0483:df11 STMicroelectronics STM Device in DFU Mode`
-3. clone the CanBoot repository to your pi
-   
-    ```bash
-    cd ~/
-    git clone https://github.com/Arksine/CanBoot
-    ```
+# Toolhead boards
 
-4. run the following
-    ```bash
-    cd CanBoot
-    make menuconfig
-    ```
+## [Huvud](../toolhead/huvud-0.61.md)
 
-5. **\<Board specific check\>**
-   
-    ![../images/canboot_make.png](../images/canboot_make.png)
+[<img src='../images/huvud_0.61.png' width='250'>](../toolhead/huvud-0.61.md)
 
-    exit using esc, confirm with yes(y)
+## [SHTXX](../toolhead/sht36-42.md)
 
-6. build the firmware
-    
-    >`make`
-    
+[<img src='../images/sht36.jpg' width='250'>](../toolhead/sht36-42.md)
+[<img src='../images/sht42.jpg' width='250'>](../toolhead/sht36-42.md)
 
-7. Flash the canboot bootloader to the board **YOUR DeviceID (0483:df11) may be different CHECK IT!** *(see step 2)*
+## [EBB v1.0 (F072)](./toolhead/ebb36-42_v1.0.md)
 
-8. ERASE AND FLASH THE CANBOOT FIRMWARE
-   
-   >`sudo dfu-util -a 0 -D ~/CanBoot/out/canboot.bin --dfuse-address 0x08000000:force:mass-erase:leave -d 0483:df11`
+[<img src='../images/ebb36_v1.0.png' width='250'>](../toolhead/ebb36-42_v1.0.md)
+[<img src='../images/ebb42_v1.0.png' width='250'>](../toolhead/ebb36-42_v1.0.md)
 
-![../images/canboot_bootloader_flash.png](../images/canboot_bootloader_flash.png)
+## [EBB v1.1 (G0B1)](./toolhead/ebb36-42_v1.1.md)
 
-9.  Power off the SHT, remove the boot jumper, and insert the CANBUS cable
-10. You can now power up your printer with the toolhead board attached via the appropriate wiring scheme using the H L 24v and gnd wires.
-    
+[<img src='../images/ebb36_v1.1.png' width='250'>](../toolhead/ebb36-42_v1.1.md)
+[<img src='../images/ebb42_v1.1.png' width='250'>](../toolhead/ebb36-42_v1.1.md)
 
-11. Wait for the device to boot and ensure your CAN0 network is up and you can see the device 
-    
-    >`~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0`
+## [EBB v1.2 (G0B1)](./toolhead/ebb36-42_v1.2.md)
 
-You should see something like `"Found canbus_uuid=XXXXXXXXXX, Application: CanBoot"`
-
-\<pending image\>
+[<img src='../images/ebb36_v1.1.png' width='250'>](../toolhead/ebb36-42_v1.2.md)
+[<img src='../images/ebb42_v1.1.png' width='250'>](../toolhead/ebb36-42_v1.2.md)
 
 
-12. Assumiing the above is working you can now flash Klipper to your board via CanBoot...
+## [TurboCAN](../toolhead/turbocan.md)
 
-```bash 
-cd ~/klipper
-make menuconfig
-```
-
-  > Enable low level configuratation
-  > set the following.
-
-![../images/sht_klipper_canboot.png](../images/sht_klipper_canboot.png)
-
-Hit <kbd>Q</kbd> to exit and select <kbd>Y</kbd> to save changes.
-
-```bash
-make clean
-make
-```
-
-You can now flash the board
-
-
-```
-python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u MYUUID
-```
-
-![../images/canboot_flash.png](../images/canboot_flash.png)
-
-
-If all is well you now have a klipper firmware on your SHT.
-
-To verify this you can query the canbus uuid with 
-
-```bash
-~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0
-```
-
-You should see something like `"Found canbus_uuid=XXXXXXXXXX, Application: Klipper"`
-
-
-### Flashing via STLink v2
-
-
-[eddietheengineer](https://github.com/eddietheengineer) has an excellent guide on flashing the CANBoot firmware.
-
-[![Flashing Klipper Firmware over CAN!](../images/klipper_to_can_yt.jpg)](https://www.youtube.com/watch?v=YrF99Sff9g8 "Flashing Klipper Firmware over CANBUS")
-
-
-
-Reference images can also be found in the [below the video.](#stlink-pinout-reference) 
-
-
-
-## STLINK PINOUT REFERENCE
-
-### HUVUD
-[<img src='../images/huvud_stlink.png' width='1000'>]()
-
-### SHTxx
-[<img src='../images/sht_stlink.png' width='1000'>]()
-
+[<img src='../images/turbocan.jpg' width='250'>](../toolhead/turbocan.md)
 
 ### [Return to Main](../index.md)

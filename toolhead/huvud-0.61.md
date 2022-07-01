@@ -2,22 +2,31 @@
 
 The boards should come preloaded with the HID bootloader for flashing over USB.
 
-This firmware allows them to be flashed via USB however they will still require a 12/24v supply while flashing!
+This firmware allows them to be flashed via USB however **they require a 12/24v** to be supplied while flashing, as the USB connector is not designed to supply power!
 
 If this firmware is missing an STLINK is needed to perform a bootloader 
 
+A CAN capable bootloader is also avaliable but requires use of an STLinkv2 device and software from STMicro.
+
+> **NOTE: DO NOT SUPPLY EXTERNAL VOLTAGE WHEN FLASHING USING AN STLINKv2**
+
+*More information about flashing using an STLinkv2 can be found following the links to eddietheengineers videos after the HID Flashing section below.*
 
 
-## Huvud Pinout
+## HID Flashing
 
-![huvud_pinout](../images/huvud_0.61_pinout.png)
+This section is specific to flashing using the HID bootloader skip to [here](#stlink-flashing) for stlink flashing.
+
+### Wiring (Flashing via HID)
+
+For flashing Wire the boards up like so
+
+![](../images/huvud_flash_wiring.svg)
 
 
+### Building HID Firmware
 
-
-
-###
-
+The following settings apply only to the HID firmware, please follow Eddies video for  Canboot compatible settings (i.e. bootloader offsets)
 
 >!!!! Enable extra config options!!!!
 >- Enable Micro-controller Architecture (STMicroelectronics STM32)
@@ -27,28 +36,64 @@ If this firmware is missing an STLINK is needed to perform a bootloader
 >- Set your CAN bus rate (250k or 500k are common)
 >!!!! Pick CAN pins (Pins PB8(rx) and PB9(tx)) !!!!
 
-Press <kbd>Q</kbd> to save and build the firmware.
+Press <kbd>Q</kbd> to exit and <kbd>Y</kbd> to save the firmware configuration.
+
+Now you can build the firmware file using
+
+```bash
+make clean
+
+make
+```
+
 
 ![](../images/hubud_config.png)
 
 
-### 
-duo 
-### Bootloader and Flashing
-
-#### Wiring
-
-Wire the boards up like so
-
-![](../images/huvud_flash_wiring.svg)
+### Flashing
 
 
-#### Flashing
+To enter the bootloader pin BOOT1 must be connected to  3.3V when the board is powered up or reset. When in the bootloader the  green LED will flash quickly. 
+
+Flash with the following command
+```bash
+make flash  FLASH_DEVICE=1209:beba
+```
 
 
-To enter the bootloader pin BOOT1 must be connected to  3.3V when the board is powered up or reset. When in the bootloader the  green LED will flash quickly. Flash with the command "make flash  FLASH_DEVICE=1209:beba"
+## STLink Flashing 
 
-Hopefully a CAN capable bootloader will be developed to allow flashing over CAN bus.
+> **NOTE: DO NOT SUPPLY EXTERNAL VOLTAGE WHEN FLASHING USING AN STLINKv2**
+
+## Flashing via STLink v2 / Installing CanBoot
+
+
+> **NOTE: DO NOT SUPPLY EXTERNAL VOLTAGE WHEN FLASHING USING AN STLINKv2**
+
+[eddietheengineer](https://github.com/eddietheengineer) has an excellent guide on flashing the CANBoot firmware.
+
+[![Flashing Klipper Firmware over CAN!](../images/klipper_to_can_yt.jpg)](https://www.youtube.com/watch?v=YrF99Sff9g8 "Flashing Klipper Firmware over CANBUS")
+
+
+
+Reference images can also be found in the [below the video.](#stlink-pinout-reference) 
+
+
+## STLINK PINOUT REFERENCE
+
+### HUVUD
+[<img src='../images/huvud_stlink.png' width='1000'>]()
+
+
+## Huvud Pinout
+
+![huvud_pinout](../images/huvud_0.61_pinout.png)
+
+
+
+## Example firmware
+
+Example configuration files for the 0.61 Huvud can be found [here](./example_configs/toolhead_bondus_huvud_0_61.cfg).
 
 
 
