@@ -87,7 +87,7 @@ Wires be heavy yo.
 
 ### [Huvud](./toolhead/huvud-0.61.md)
 
-[<img src='./images/huvud_0.61.png' width='250'>](../toolhead/huvud-0.61.md)
+[<img src='./images/huvud_0.61.png' width='250'>](./toolhead/huvud-0.61.md)
 
 ### [SHTXX](./toolhead/sht36-42.md)
 
