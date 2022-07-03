@@ -13,6 +13,9 @@ A CAN capable bootloader is also avaliable but requires use of an STLinkv2 devic
 *More information about flashing using an STLinkv2 can be found following the links to eddietheengineers videos after the HID Flashing section below.*
 
 
+
+# **Before proceeding it is critical that your CAN network is configured for your printer, failure to setup the network will cause a problem when you try to connect devices :) click [here](../index.md#control-boards) and select your controller for setup instructions!**
+
 ## HID Flashing
 
 This section is specific to flashing using the HID bootloader skip to [here](#stlink-flashing) for stlink flashing.

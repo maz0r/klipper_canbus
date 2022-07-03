@@ -49,9 +49,9 @@ Wires be heavy yo.
 [<img src='./images/mks_canable.jpg' width='250'>](/controller/canable.md)
 
 
-[can2usb](./controller/usb2can.md)
+[can2usb](./controller/can2usb.md)
 
-[<img src='./images/usb2can.jpg' width='250'>](/controller/usb2can.md)
+[<img src='./images/usb2can.jpg' width='250'>](/controller/can2usb.md)
 
 [rs485 (waveshare)](./controller/rs485.md)
 
@@ -61,11 +61,26 @@ Wires be heavy yo.
 
 [<img src='./images/utoc-1.jpg' width='250'>](/controller/utoc1-3.md)
 
+
+
+## Use your Printers Controlboard as USB2CAN adapter!
+
+Following a recent merge by the Klipper dev's it is now possible to flash a version of firmware to boards such as the Octopus, Spider and Makerbase Monster8, to enable using them as both a CANBus Adapter while retaining the ability to print normally!.
+
+**[https://www.klipper3d.org/CANBUS.html#usb-to-can-bus-bridge-mode](https://www.klipper3d.org/CANBUS.html#usb-to-can-bus-bridge-mode)**
+
+I'll add a full walkthrough with pictures soon.
+
 ## Special Bootloaders (Optional but recommended)
 
 [canboot](./controller/canboot.md)
 
 [<img src='./images/canboot.png' width='250'>](./controller/canboot.md)
+
+
+
+
+
 
 ## Toolhead boards
 

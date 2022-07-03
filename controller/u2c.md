@@ -1,4 +1,4 @@
-# Canable & Clones
+# Bigtreetech U2C 1 & 3
 
 ## **PI Setup**
 
@@ -29,28 +29,27 @@ The key thing to note is that the network is **UP** for now.
 ![../images/iplink.png](../images/iplink.png)
 
 
+## Wiring Guide -- Coming Soon
 
-## Can2USB firmware for Canable/U2C/UTOC boards
+## Termination Guide - Coming Soon
 
-Optional (but may fix issues if your network doesnt start up)
+## Troubleshooting
 
-You can flash candlelight firmware on many of the common boards (UTOC/U2C/Canable) with the following instructions
+1. > I can see my `can0` network but when I connect my device to query the uuid there is no value returned.
 
-[./candlelight_fw.md](candlelight_fw.md)
+    [Check Wiring]()
 
+    [Check Firmware]()
 
-
-### Suggested troubleshooting
-
-1. If nothing shows up, try completely powering off printer and restarting it
-2. Check that the toolboard is also flashed to 500k instead of 250k .
+    [Check Termination]()
 
 
+## Flashing U2C Firmware
+
+In order to flash the U2C the `boot` and `reset` buttons need to be pressed and released after connecting he board (release `boot` last.
+
+You can then **flash [candlelight_fw](./candlelight_fw.md)**
 
 
-#### references
-
-https://www.klipper3d.org/CANBUS.html
-https://www.waveshare.com/wiki/RS485_CAN_HAT
 
 ### [Return to Main](../index.md)

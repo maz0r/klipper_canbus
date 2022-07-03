@@ -9,6 +9,12 @@ Due to the sheer number of boards CanBoot now supports each with different means
 
 Below you will find a link to each board family.
 
+
+# **Before proceeding however it is critical that your CAN network is configured for your printer, failure to setup the network will cause a problem when you try to connect devices :) click [here](../index.md#control-boards) and select your controller for setup instructions!**
+
+
+
+
 # Toolhead boards
 
 ## [Huvud](../toolhead/huvud-0.61.md)
