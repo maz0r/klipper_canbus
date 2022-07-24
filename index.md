@@ -61,6 +61,12 @@ Wires be heavy yo.
 
 [<img src='./images/utoc-1.jpg' width='250'>](/controller/utoc1-3.md)
 
+## Klipper USBtoCAN bridge Adapters
+
+## [MKS Monster8 v2](./monster8v2.md)
+
+[<img src='./images/monster8v2.png' width='250'>](./controller/monster8v2.md)
+
 
 
 ## Use your Printers Controlboard as USB2CAN adapter!
