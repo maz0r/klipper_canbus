@@ -63,7 +63,7 @@ Wires be heavy yo.
 
 ## Klipper USBtoCAN bridge Adapters
 
-## [MKS Monster8 v2](./monster8v2.md)
+## [MKS Monster8 v2](./controller/monster8v2.md)
 
 [<img src='./images/monster8v2.png' width='250'>](./controller/monster8v2.md)
 
