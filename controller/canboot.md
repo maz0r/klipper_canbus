@@ -46,4 +46,12 @@ Below you will find a link to each board family.
 
 [<img src='../images/turbocan.jpg' width='250'>](../toolhead/turbocan.md)
 
+# **USBtoCANBridge Adapters**
+
+## [MKS Monster8 v2](./monster8v2.md)
+
+[<img src='../images/monster8v2.png' width='250'>](./monster8v2.md)
+
+
+
 ### [Return to Main](../index.md)
