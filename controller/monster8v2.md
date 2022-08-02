@@ -195,7 +195,7 @@ you can now reboot the pi with ` sudo reboot `
 
 ## Verify the adapter is seen
 
-```lsusb```
+`lsusb`
 
 ![usbcanbridge.png](../images/usbcanbridge.png)
 
