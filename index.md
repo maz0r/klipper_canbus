@@ -114,10 +114,13 @@ I'll add a full walkthrough with pictures soon.
 
 [<img src='./images/huvud_0.61.png' width='250'>](./toolhead/huvud-0.61.md)
 
-### [SHTXX](./toolhead/sht36-42.md)
+### [SHTXX (v1)](./toolhead/sht36-42.md)
 
 [<img src='./images/sht36.jpg' width='250'>](./toolhead/sht36-42.md)
 [<img src='./images/sht42.jpg' width='250'>](./toolhead/sht36-42.md)
+
+### [SHT36 (v2)](./toolhead/sht36v2.md)
+[<img src='./images/sht36v2.png' width='250'>](./toolhead/sht36v2.md)
 
 ### [EBB v1.0 (F072)](./toolhead/ebb36-42_v1.0.md)
 
@@ -216,3 +219,6 @@ So simply bridge the green pins is per the images below.
 ##### 42
  
 [<img src='./images/sht42_terminated.jpg' width='250'>](./images/sht42_terminated.jpg) 
+
+##### 36 v2
+[<img src='./images/sht36v2_terminated.png' width='250'>](./images/sht36v2_terminated.png) 
