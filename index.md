@@ -44,7 +44,11 @@ Wires be heavy yo.
 - [ ] Highlight where different controller/board combinations may be wired differently (termination/ground/voltage passthrough etc).
 
 ***
+## Special Notes
 
+#### Running Ubuntu Server or another Linux distribution that utilises systemd-networkd?
+
+[Use this for your network steps](./extras/systemd-networkd.md)
 
 ## Control boards
 
@@ -64,6 +68,12 @@ Wires be heavy yo.
 [utoc](./controller/utoc1-3.md)
 
 [<img src='./images/utoc-1.jpg' width='250'>](/controller/utoc1-3.md)
+
+[u2c](./controller/u2c.md)
+
+[<img src='./images/u2c.jpg' width='250'>](/controller/u2c.md)
+
+
 
 ## Klipper USBtoCAN bridge Adapters
 
@@ -86,9 +96,6 @@ I'll add a full walkthrough with pictures soon.
 [canboot](./controller/canboot.md)
 
 [<img src='./images/canboot.png' width='250'>](./controller/canboot.md)
-
-
-
 
 
 
