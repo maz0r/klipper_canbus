@@ -21,7 +21,7 @@ According to [Mellow](https://mellow.klipper.cn/?spm=a2g0o.detail.1000023.17.5cd
 > Note, please pay attention to the main control chip purchased after 2022-10-18, the first batch is GD32F103, and the later shipment is APM32F072
 
 You'll need to configure the Klipper firmware build differently depending on which chip your board has.
-The easiest way to tell the two MCUs apart is to match the text printed on the chip to the iamge below.
+The easiest way to tell the two MCUs apart is to match the text printed on the chip to the image below.
 
 ![Difference between SHTv2 MCUs](../images/sht36v2_mcus.jpg)
 
