@@ -29,7 +29,7 @@ Below you will find a link to each board family.
 ## [SHT36 (v2)](../toolhead/sht36v2.md)
 [<img src='../images/sht36v2.png' width='250'>](../toolhead/sht36v2.md)
 
-## [EBB v1.0 (F072)](./toolhead/ebb36-42_v1.0.md)
+## [EBB v1.0 (F072)](../toolhead/ebb36-42_v1.0.md)
 
 [<img src='../images/ebb36_v1.0.png' width='250'>](../toolhead/ebb36-42_v1.0.md)
 [<img src='../images/ebb42_v1.0.png' width='250'>](../toolhead/ebb36-42_v1.0.md)
@@ -39,7 +39,7 @@ Below you will find a link to each board family.
 [<img src='../images/ebb36_v1.1.png' width='250'>](../toolhead/ebb36-42_v1.1.md)
 [<img src='../images/ebb42_v1.1.png' width='250'>](../toolhead/ebb36-42_v1.1.md)
 
-## [EBB v1.2 (G0B1)](./toolhead/ebb36-42_v1.2.md)
+## [EBB v1.2 (G0B1)](../toolhead/ebb36-42_v1.2.md)
 
 [<img src='../images/ebb36_v1.1.png' width='250'>](../toolhead/ebb36-42_v1.2.md)
 [<img src='../images/ebb42_v1.1.png' width='250'>](../toolhead/ebb36-42_v1.2.md)
