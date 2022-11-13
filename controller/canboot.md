@@ -34,7 +34,7 @@ Below you will find a link to each board family.
 [<img src='../images/ebb36_v1.0.png' width='250'>](../toolhead/ebb36-42_v1.0.md)
 [<img src='../images/ebb42_v1.0.png' width='250'>](../toolhead/ebb36-42_v1.0.md)
 
-## [EBB v1.1 (G0B1)](./toolhead/ebb36-42_v1.1.md)
+## [EBB v1.1 (G0B1)](../toolhead/ebb36-42_v1.1.md)
 
 [<img src='../images/ebb36_v1.1.png' width='250'>](../toolhead/ebb36-42_v1.1.md)
 [<img src='../images/ebb42_v1.1.png' width='250'>](../toolhead/ebb36-42_v1.1.md)
