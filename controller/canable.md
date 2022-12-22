@@ -5,7 +5,7 @@
 ` sudo nano /etc/network/interfaces.d/can0 `
 
 ```bash
-auto can0
+allow-hotplug can0
 iface can0 can static
  bitrate 500000
  up ifconfig $IFACE txqueuelen 256
