@@ -38,15 +38,21 @@ The key thing to note is that the network is **UP** for now.
 1. > I can see my `can0` network but when I connect my device to query the uuid there is no value returned.
 
     [Check Wiring]()
-
+        - The USB cables can be dodgey, try another one
+          - Verify with `lsusb`
+        - Check you havent gotten H/L or +/- switched
+    [check network]()
     [Check Firmware]()
-
+        - 
     [Check Termination]()
-
+        - Ensure you have the relevant termination jumper(s) in place, typically this is the one nearest the USB-C port.
 
 ## Flashing U2C Firmware
 
-In order to flash the U2C the `boot` and `reset` buttons need to be pressed and released after connecting he board (release `boot` last.
+**note: The boards are flashed from the factory so should not need flashing in most cases**
+*The U2C does not need Canboot or Klipper flashing, only the firmware to act as a can network adapter (I mean you can, its not what its for)*
+
+In order to flash the U2C the `boot` button needs to be held and released after connecting the USB cable to the board.
 
 You can then **flash [candlelight_fw](./candlelight_fw.md)**
 
