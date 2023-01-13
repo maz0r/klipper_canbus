@@ -126,6 +126,10 @@ We can now flash the canboot bootloader we created
 sudo dfu-util -a 0 -D ~/CanBoot/out/canboot.bin --dfuse-address 0x08000000:force:mass-erase:leave -d 0483:df11
 ```
 
+**NOTE: If you see an error after the above, don't worry its fine, provided you have the "File Downloaded Sucessfully" on the line before the error**
+
+ 
+
 ### Verify the CanBoot usb bootloader is loaded (requires double tap of RESET button)
 
 `lsusb` should show an OpenMoko device stm32f407xx
