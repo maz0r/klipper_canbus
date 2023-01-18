@@ -11,8 +11,10 @@ Assumptions
   - Other... (some things may vary)
 - A CAN toolhead board
   - Huvud
+  - EBB36/42
   - SHT36/42
   - TurboCAN
+  - SB CAN
 - This guide and a brew (or coffee if you must)
   
 
@@ -149,7 +151,9 @@ I'll add a full walkthrough with pictures soon.
 
 [<img src='./images/turbocan.jpg' width='250'>](./toolhead/turbocan.md)
 
+[SB CAN TH v1.1](./toolhead/sb_can_v1.1.md)
 
+[<img src='./images/sb_can_v1.1.png' width='250'>](./toolhead/sb_can_v1.1.md)
 
 ## Connecting your controller to your Toolhead board
 
