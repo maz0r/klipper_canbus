@@ -21,7 +21,7 @@ otherwise continue
 ### Check your version of systemd supports CAN interfaces
 
 Run 
-```ini 
+```bash
 systemctl --version
 ```
 
@@ -31,14 +31,14 @@ If it reports a systemd version number of 239 or higher you are fine to continue
 ### creating a CAN network for systemd-networkd
 
 Run 
-```ini 
-sudo ls /etc/systemd/network/
+```bash
+ls /etc/systemd/network/
 ```
 
 If you see `80-can.network` check its blank before you blindly overwrite anything (its probably blank)
 
 Running the below will open the existing file for editing, OR if none exist it will create a new file.
-```ini
+```bash
 sudo nano /etc/systemd/network/80-can.network
 ```
 
@@ -59,7 +59,7 @@ and press <kbd>Ctrl</kbd>+<kbd>X</kbd> to save. (You can overwrite)
 Next up we can create a .link file which will allow setting of the txqueuelen and network type.
 
 Again we can run the below to create an empty file.
-```ini
+```bash
 sudo nano /etc/systemd/network/80-can.link
 ``` 
 
@@ -80,13 +80,13 @@ and press <kbd>Ctrl</kbd>+<kbd>X</kbd> to save. (You can overwrite)
 
 The following commands will restart the stack incoporating your new network settings
 
-```ini
+```bash
 sudo systemctl restart systemd-networkd
 ```
 
 You can check the status after with
 
-```ini
+```bash
 sudo systemctl status systemd-networkd
 ```
 
@@ -103,7 +103,7 @@ It will present with an id of **`1d50:606f`** for most Candlelight_Fw devices, b
 
 check if the network is up
 
-```ini
+```bash
 ip -details link show can0
 ```
 
@@ -112,20 +112,20 @@ If you see a warning about the device not existing you need to check that your O
 
 If you dont see a network but your USB device is connected and visible, run the following to force the nework up.
 
-```ini
-sudo ip link set up can0
+```bash
+sudo networkctl up can0
 ```
 
 
 Double check the network came up
 
-```ini
+```bash
 ip -details link show can0
 ```
 
 A good network will look like this (for now)
 
-```ini
+```console
 can0: <NOARP,UP,LOWER_UP,ECHO> mtu 16 qdisc pfifo_fast state UP mode DEFAULT group default qlen 10
     link/can  promiscuity 0 minmtu 0 maxmtu 0 
     can state ERROR-ACTIVE restart-ms 0 
@@ -134,6 +134,39 @@ can0: <NOARP,UP,LOWER_UP,ECHO> mtu 16 qdisc pfifo_fast state UP mode DEFAULT gro
           gs_usb: tseg1 1..16 tseg2 1..8 sjw 1..4 brp 1..1024 brp-inc 1
           clock 48000000 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 parentbus usb parentdev 1-2:1.0
 ```
+
+### Transmit queue length through udev (optional)
+
+The transmit queue length setting isn't available in all systemd-networkd versions. If the transmit queue length isn't applied from your networkd configuration you can set up transmit queue length through udev instead.
+
+To verify that your queue length value has been applied, you can run:
+```bash
+ip link show can0
+```
+
+The queue length is the value after qlen. In this example queue length is 10 instead of the expected 256:
+```console
+can0: <NOARP,UP,LOWER_UP,ECHO> mtu 16 qdisc pfifo_fast state UP mode DEFAULT group default qlen 10
+    link/can  promiscuity 0 minmtu 0 maxmtu 0 
+```
+
+To fix this add a udev rule:
+```bash
+sudo nano /etc/udev/rules.d/99-can.link
+```
+
+Enter the contents:
+```ini
+# set tx queue size for canbus
+SUBSYSTEM=="net", ACTION=="add|change", KERNEL=="can0" ATTR{tx_queue_len}="256"
+```
+
+and press <kbd>Ctrl</kbd>+<kbd>X</kbd> to save. (You can overwrite)
+
+Finally you need to restart the system.
+
+
+---
 
 references: 
  - https://medium.com/100-days-of-linux/working-with-systemd-networkd-e461cfe80e6d  
