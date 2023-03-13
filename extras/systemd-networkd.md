@@ -144,7 +144,7 @@ To verify that your queue length value has been applied, you can run:
 ip link show can0
 ```
 
-The queue length is the balue after qlen. In this example queue length is 10 instead of the expected 256:
+The queue length is the value after qlen. In this example queue length is 10 instead of the expected 256:
 ```console
 can0: <NOARP,UP,LOWER_UP,ECHO> mtu 16 qdisc pfifo_fast state UP mode DEFAULT group default qlen 10
     link/can  promiscuity 0 minmtu 0 maxmtu 0 
@@ -166,6 +166,7 @@ and press <kbd>Ctrl</kbd>+<kbd>X</kbd> to save. (You can overwrite)
 Finally you need to restart the system.
 
 
+---
 
 references: 
  - https://medium.com/100-days-of-linux/working-with-systemd-networkd-e461cfe80e6d  
