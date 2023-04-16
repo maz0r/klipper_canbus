@@ -48,7 +48,7 @@ Populate the file
 [Match]
 Name=can0
 
-[Network]
+[CAN]
 BitRate=1000000
 ```
 
@@ -152,7 +152,7 @@ can0: <NOARP,UP,LOWER_UP,ECHO> mtu 16 qdisc pfifo_fast state UP mode DEFAULT gro
 
 To fix this add a udev rule:
 ```bash
-sudo nano /etc/udev/rules.d/99-can.link
+sudo nano /etc/udev/rules.d/99-canbus.rules
 ```
 
 Enter the contents:
