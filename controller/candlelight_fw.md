@@ -6,7 +6,7 @@ However if you would like to try a different firmware for troubleshooting, you c
 
 
 
-## **https://canable.io/updater/**
+## **[https://canable.io/updater/canable1.html](https://canable.io/updater/canable1.html)**
 
 
 If you encounter issues with the device not being recognised or being write restricted follow the links they have for fixing Windows Drivers, or if on Linux adding a udev rule.
