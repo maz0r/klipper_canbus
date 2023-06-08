@@ -54,8 +54,9 @@ The key thing to note is that the network is **UP** for now.
 
 In order to flash the U2C the `boot` button needs to be held and released after connecting the USB cable to the board.
 
-You can then **flash [candlelight_fw](./candlelight_fw.md)**
-
+If you have the STM32F072 version of the board (U2C 1.0/1.1) You can **flash [candlelight_fw](./candlelight_fw.md)**
+If you have the STM32G0B1 version, you must use the firmware provided by BTT [https://github.com/bigtreetech/U2C/tree/master/firmware](https://github.com/bigtreetech/U2C/tree/master/firmware)
+ 
 
 
 ### [Return to Main](../index.md)
