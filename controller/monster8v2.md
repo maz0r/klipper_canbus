@@ -102,7 +102,9 @@ Insert the USB power jumper per the red box below
 
 Connect the board to the PI via USB C
 
-Double press the Reset button marked with a green box below (alternativley hold the boot button while connecting the board via USB)
+You can then hold `reset` (blue box), hold `boot0` (labled above the blue box) and release `reset` followed by `boot0` to enter DFU mode. 
+> Alternativley if your firmware has doulbe press for bootloader enabled, you can use this.
+> or simply hold the Boot0 button while connecting the USB 
 
 ![monster8v2_usb_boot.png](../images/monster8v2_usb_boot.png)
 
