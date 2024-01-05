@@ -4,7 +4,17 @@ The Manta M5P is capable of CANBus but in the vendor manual that comes with it, 
 
 ## Hardware Setup
 
-
+1. Put a jumper on the 120R termination pins as shown here
+[pic]
+2. Connect your CAN cable to your toolhead as shown like this. GREEN is CAN Low and YELLOW is CAN High.
+[pic]
+3. Assuming you followed Step 2, connect the GREEN and YELLOW wires to the following pins on the Manta M5P.
+[pic]
+4. And connect the power pins to these.
+[pic]
+5. Ensure that your toolhead board (EBB36 or so) has the 120R Jumper connected. Pic for example:
+[pic]
+6. Leave your toolhead board disconnected first from the Manta M5P, and proceed to the software steps for now. Prepare your cabling and connectors so that in step 21 of the Software Steps you can connect your toolhead board and continue with the setup.
 
 ## Software Steps
 
@@ -126,7 +136,7 @@ Detected UUID: abcdef123456, Application: Klipper
 Detected UUID: fedcba654321, Application: Klipper
 Query Complete
 ```
-28. If all this works, proceed to setting up your printer.cfg below.
+28. If all this works, proceed to setting up your printer.cfg. Take the example printer.cfg of your printer and your toolhead board, but find the `[mcu]` and `[mcu <whatever>]` to modify  as shown in the printer.cfg section below:
 
 ## printer.cfg
 
