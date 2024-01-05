@@ -83,7 +83,9 @@ Wires be heavy yo.
 
 [<img src='./images/monster8v2.png' width='250'>](./controller/monster8v2.md)
 
+## [Manta M5P](./controller/mantam5p.md)
 
+[<img src='./images/mantam5p.png' width='250'>](./controller/mantam5p.md)
 
 ## Use your Printers Controlboard as USB2CAN adapter!
 
