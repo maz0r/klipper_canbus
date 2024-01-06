@@ -74,12 +74,10 @@ sudo dfu-util -a 0 -d 0483:df11 --dfuse-address 0x08002000:force:leave -D ~/klip
 14. Set up the CAN Network by pasting this into your command line:
 ```
 cat <<MEOW > /etc/network/interfaces.d/can0
-allow-hotplug can0
+auto can0
 iface can0 can static
- bitrate 500000
- up ifconfig $IFACE txqueuelen 256
- pre-up ip link set can0 type can bitrate 500000
- pre-up ip link set can0 txqueuelen 256
+ bitrate 1000000
+ up ifconfig $IFACE txqueuelen 1024
 MEOW
 ```
 
