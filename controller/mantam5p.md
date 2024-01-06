@@ -37,8 +37,13 @@ The Manta M5P is capable of CANBus but in the vendor manual that comes with it, 
     [ ] Enable Status LED
 ```
 5. `make clean && make`
-6. Go to your Klipper directory `cd ~/klipper`
-7. Configure our new Klipper firmware for the Manta M5P `make menuconfig`
+6. Use the command to write CanBoot into the Manta
+```
+sudo dfu-util -a 0 -D ~/CanBoot/out/canboot.bin --dfuse-address 0x08000000:force:mass-erase -d 0483:df11
+```
+
+7. Go to your Klipper directory `cd ~/klipper`
+8. Configure our new Klipper firmware for the Manta M5P `make menuconfig`
 
 ```
 [*] Enable extra low-level configuration options
@@ -52,17 +57,13 @@ The Manta M5P is capable of CANBus but in the vendor manual that comes with it, 
 (1000000) CAN bus speed
 ()  GPIO pins to set at micro-controller startup
 ```
-8. Build the klipper firmware `make clean && make`
-9. Put the Manta M5P into DFU mode. Press and hold boot, then press and release the reset button, release the boot button. (sometimes simply double-clicking the reset button works too)
-10. On your pi, type `lsusb`
-11. You should see something like this. (if you don't check that you did exactly what is written in step 9)
+9. Build the klipper firmware `make clean && make`
+10. Put the Manta M5P into DFU mode. Press and hold boot, then press and release the reset button, release the boot button. (sometimes simply double-clicking the reset button works too)
+11. On your pi, type `lsusb`
+12. You should see something like this. (if you don't check that you did exactly what is written in step 9)
 ```
     Bus 001 Device 011: ID 0483:df11 STMicroelectronics STM Device in DFU Mode
                                                                       ^^^^^^^^  important bit
-```
-12. Use the command to write CanBoot into the Manta
-```
-sudo dfu-util -a 0 -D ~/CanBoot/out/canboot.bin --dfuse-address 0x08000000:force:mass-erase -d 0483:df11
 ```
 
 13. Use this command to write klipper into the Manta
@@ -153,3 +154,6 @@ canbus_interface: can0
 ## Aside
 
 Vendor github is located here: https://github.com/bigtreetech/Manta-M5P/tree/master
+Plagiarized from
+- https://gist.github.com/fredrikasberg/c14f08eb8617bf8981f77dbc01b00602
+- https://github.com/bigtreetech/Manta-M5P/issues/3
