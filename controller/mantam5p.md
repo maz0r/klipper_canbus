@@ -118,6 +118,8 @@ Detected UUID: fedcba654321, Application: Katapult
 Query Complete
 ```
 
+If you do not, refer to Section 1. in the Troubleshooting Section.
+
 23. Write down the new EBB36/42 UUID. This is your toolhead UUID
 
 25. Go to https://github.com/maz0r/klipper_canbus/tree/main/toolhead and find the toolhead and use those instructions to flash your toolhead board.
@@ -148,6 +150,16 @@ canbus_interface: can0
 canbus_uuid: <THE UUID YOU GOT IN STEP 23 ABOVE>
 canbus_interface: can0
 ```
+
+## Troubleshooting
+
+### 1. Omg my EBB42/36/toolhead board is not coming up on UUIDs!
+
+An easy way to check if your toolhead board is alive is just to see if the LEDs on the toolhead board are lit. If they are not, then its not connected properly.
+
+Check that your wires are crimped right (disconnect your cable on both ends and use a multimeter to check that your cables).
+
+
 
 ## Aside
 
